@@ -36,13 +36,6 @@ Live Demo: https://tantowel.com
       sizeModal();
     }
   };
-  
-  returnFocus = function () {
-    // when modal closes, return focus to the element that initiated opening the modal
-    setTimeout(function() {
-      $previouslyFocused.focus();
-    }, 500);
-  }
 
   // manage focus within modal
   manageFocus = function() {
@@ -80,6 +73,13 @@ Live Demo: https://tantowel.com
       }
     }
   }
+  
+  returnFocus = function () {
+    // when modal closes, return focus to the element that initiated opening the modal
+    setTimeout(function() {
+      $previouslyFocused.focus();
+    }, 500);
+  };
 
   sizeModal = function(isResizing) {
     
