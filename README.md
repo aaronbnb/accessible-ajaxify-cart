@@ -7,14 +7,17 @@ AjaxifyModal with accessibility features, setting focus and trapping the tab key
 
 ```javascript
 // Private general variables
-  var settings, cartInit, $drawerHeight, $cssTransforms, $cssTransforms3d, $nojQueryLoad, $w, $body, $html, $focusableElementsString, $focusableElements, $firstTabStop, $lastTabStop, $previouslyFocused;
+  var settings, cartInit, $drawerHeight, $cssTransforms, $cssTransforms3d, $nojQueryLoad, 
+  $w, $body, $html, $focusableElementsString, $focusableElements, $firstTabStop, 
+  $lastTabStop, $previouslyFocused;
 ```
 
 ```javascript
 // On modal init
     // find all focusable children, for use within the modal
-    $focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), ' + 
-    'textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
+    $focusableElementsString = 'a[href], area[href], input:not([disabled]), ' +  
+    'select:not([disabled]), textarea:not([disabled]), button:not([disabled]), ' +
+    'iframe, object, embed, [tabindex="0"], [contenteditable]';
     
 // save a reference to the current element in focus
     $previouslyFocused = document.activeElement ? document.activeElement : $body;
